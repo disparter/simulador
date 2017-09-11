@@ -14,7 +14,6 @@ public class GenericDAO<T extends BaseEntity<?>> {
     
     private static  final String DEFAULT_SYSTEM_USER_NAME = "system";
     
-    
     @PersistenceContext(unitName="simuladorPU")
     private EntityManager entityManager;
     

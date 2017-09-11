@@ -29,6 +29,9 @@ public class Questao extends BaseEntity<Long> {
 	
 	@Column(name = "str_prova")
 	private String prova;
+	
+	@Column(name = "str_assunto")
+	private String assunto;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "int_banca_id")
@@ -66,6 +69,14 @@ public class Questao extends BaseEntity<Long> {
 
 	public void setProva(String prova) {
 		this.prova = prova;
+	}
+
+	public String getAssunto() {
+		return assunto;
+	}
+
+	public void setAssunto(String assunto) {
+		this.assunto = assunto;
 	}
 
 }

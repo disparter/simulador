@@ -31,6 +31,9 @@ public class QuestaoItem extends BaseEntity<Long> {
 	@JoinColumn(name = "int_questao_id")
 	@ForeignKey(name = "questao_item_fk")
 	private Questao questao;
+	
+	@Column(name = "st_correta")
+	private Boolean correta;
 
 	public Long getId() {
 		return id;
