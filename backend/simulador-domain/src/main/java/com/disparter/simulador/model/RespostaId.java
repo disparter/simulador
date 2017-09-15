@@ -13,8 +13,8 @@ public class RespostaId implements Serializable {
 	@Column(name = "int_pessoa_id")
 	private Long pessoaId;
 
-	@Column(name = "int_questao_id")
-	private Long questaoId;
+	@Column(name = "int_questaoItem_item_id")
+	private Long questaoItemId;
 
 	public Long getPessoaId() {
 		return pessoaId;
@@ -24,12 +24,12 @@ public class RespostaId implements Serializable {
 		this.pessoaId = pessoaId;
 	}
 
-	public Long getQuestaoId() {
-		return questaoId;
+	public Long getQuestaoItemId() {
+		return questaoItemId;
 	}
 
-	public void setQuestaoId(Long questaoId) {
-		this.questaoId = questaoId;
+	public void setQuestaoItemId(Long questaoItemId) {
+		this.questaoItemId = questaoItemId;
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class RespostaId implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((pessoaId == null) ? 0 : pessoaId.hashCode());
-		result = prime * result + ((questaoId == null) ? 0 : questaoId.hashCode());
+		result = prime * result + ((questaoItemId == null) ? 0 : questaoItemId.hashCode());
 		return result;
 	}
 
@@ -55,10 +55,10 @@ public class RespostaId implements Serializable {
 				return false;
 		} else if (!pessoaId.equals(other.pessoaId))
 			return false;
-		if (questaoId == null) {
-			if (other.questaoId != null)
+		if (questaoItemId == null) {
+			if (other.questaoItemId != null)
 				return false;
-		} else if (!questaoId.equals(other.questaoId))
+		} else if (!questaoItemId.equals(other.questaoItemId))
 			return false;
 		return true;
 	}

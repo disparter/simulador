@@ -26,12 +26,7 @@ public class Resposta extends BaseEntity<RespostaId> {
 	private Pessoa pessoa;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "int_questao_id", insertable = false, updatable = false)
-	@ForeignKey(name = "questao_resposta_fk")
-	private Questao questao;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "int_questao_item_id")
+	@JoinColumn(name = "int_questao_item_id", insertable = false, updatable = false)
 	@ForeignKey(name = "questao_item_resposta_fk")
 	private QuestaoItem questaoItem;
 
@@ -50,14 +45,6 @@ public class Resposta extends BaseEntity<RespostaId> {
 
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
-	}
-
-	public Questao getQuestao() {
-		return questao;
-	}
-
-	public void setQuestao(Questao questao) {
-		this.questao = questao;
 	}
 
 	public QuestaoItem getQuestaoItem() {

@@ -3,6 +3,8 @@ package com.disparter.simulador.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -22,6 +24,7 @@ public class QuestaoItem extends BaseEntity<Long> {
 
 	@Id
 	@Column(name = "int_questao_item_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pk_sequence_questao_item")
 	private Long id;
 
 	@Column(name = "str_enunciado", length = 10000)
